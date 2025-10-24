@@ -121,7 +121,7 @@ $$F+N+G+f=F_合$$
 transition: fade-out
 title: 竖直上抛
 dragPos:
-  square1: 16,4,726,216
+  square1: 55,8,726,216
 ---
 
 <img v-drag="'square1'" src="./files/2.png">
