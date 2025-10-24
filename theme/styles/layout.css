@@ -1,8 +1,14 @@
 .slidev-layout {
   @apply px-14 py-10 text-[1.1rem];
+  color: #1e3a8a; /* 深蓝色 */
 
   h1, h2, h3, h4, p, div {
     @apply select-none;
+  }
+  
+  /* 重置标题颜色为默认（黑色） */
+  h1, h2, h3, h4 {
+    color: #000000;
   }
 
   pre, code {
