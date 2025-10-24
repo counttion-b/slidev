@@ -21,21 +21,17 @@ transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 hideInToc: true
+addons:
+  - slidev-addon-graph
 ---
 
-# 匀变速直线运动实例分析
-## Analysis of uniformly accelerated linear motion examples
-秋第四次课 · 2025-09-27 · 田以恒
-
-
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
-  </a>
-</div>
+---
+layout: cover
+titleZh: 带电粒子在复合场中的运动
+session: Autumn-7
+date: 25.10.25
+teacher: 田以恒
+---
 
 ---
 layout: two-cols
@@ -62,6 +58,7 @@ level: 2
 
 # 公式法
 1
+$\sqrt{3x-1}+(1+x)^2$
 
 ---
 transition: fade-out
@@ -86,4 +83,25 @@ title: 多过程
 ---
 
 #多过程
-1
+<SlidevGraph
+  id="graph1"
+  :items="[
+    { name: 'foo', color: '#155' },
+    { name: 'bar', color: '#551', from: ['foo'] },
+  ]"
+/>
+
+---
+title: 题解演示（可滚动容器）
+level: 2
+---
+
+## 题目解答（触控可滚动）
+
+使用方式一：组件
+$\sqrt{3x-1}+(1+x)^2$
+<Solution src="/files/9.27.md" maxHeight="25vh" />
+
+<br>
+
+$F=ma$

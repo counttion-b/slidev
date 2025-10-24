@@ -125,3 +125,51 @@
     @apply text-6xl font-500 leading-20;
   }
 }
+
+/* 封面布局样式 */
+.slidev-layout.cover-layout {
+  @apply h-full;
+  
+  .cover-title {
+    /* 基础字体大小，会根据标题长度自动调整 */
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1.1;
+    max-width: 95%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
+    
+    /* 根据字符数量调整字体大小 */
+    &.short-title {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+    }
+    
+    &.medium-title {
+      font-size: clamp(2rem, 6vw, 4rem);
+    }
+    
+    &.long-title {
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      /* 长标题允许换行 */
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+    }
+    
+    /* 超长标题的特殊处理 */
+    &.extra-long-title {
+      font-size: clamp(1.2rem, 4vw, 2.5rem);
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+      line-height: 1.2;
+    }
+  }
+  
+  /* 副标题信息样式 */
+  .cover-subtitle {
+    @apply mt-8 text-base md:text-lg opacity-70 tracking-wide;
+    color: #666;
+  }
+}

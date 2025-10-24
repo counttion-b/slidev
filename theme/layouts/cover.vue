@@ -1,10 +1,8 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+
 const props = defineProps({
   titleZh: {
-    type: String,
-    default: '',
-  },
-  titleEn: {
     type: String,
     default: '',
   },
@@ -24,14 +22,24 @@ const props = defineProps({
     default: '',
   },
 })
+
+// 根据标题长度计算CSS类
+const titleClass = computed(() => {
+  if (!props.titleZh) return 'cover-title'
+  
+  const length = props.titleZh.length
+  if (length <= 4) return 'cover-title short-title'
+  if (length <= 8) return 'cover-title medium-title'
+  if (length <= 12) return 'cover-title long-title'
+  return 'cover-title extra-long-title'
+})
 </script>
 
 <template>
-  <div class="slidev-layout w-full h-full grid place-content-center bg-black text-white text-center">
-    <div v-if="props.titleZh || props.titleEn" class="px-8">
-      <h1 v-if="props.titleZh" class="text-5xl md:text-7xl font-700 leading-tight">{{ props.titleZh }}</h1>
-      <h2 v-if="props.titleEn" class="mt-4 text-2xl md:text-3xl opacity-90 tracking-wide">{{ props.titleEn }}</h2>
-      <div v-if="props.session || props.date || props.teacher" class="mt-6 text-sm md:text-base opacity-80 tracking-wide flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+  <div class="slidev-layout cover-layout w-full h-full grid place-content-center bg-white text-black text-center">
+    <div v-if="props.titleZh" class="px-8">
+      <h1 v-if="props.titleZh" :class="titleClass">{{ props.titleZh }}</h1>
+      <div v-if="props.session || props.date || props.teacher" class="cover-subtitle flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
         <span v-if="props.session">{{ props.session }}</span>
         <span v-if="props.date" class="opacity-70">•</span>
         <span v-if="props.date">{{ props.date }}</span>
