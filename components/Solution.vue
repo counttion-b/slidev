@@ -55,7 +55,7 @@ const containerStyle = computed(() => ({
 
 <template>
   <div
-    class="overflow-auto rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-black/30 backdrop-blur-sm p-2"
+    class="overflow-auto rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-black/30 backdrop-blur-sm p-2 text-left"
     :style="containerStyle"
   >
     <component v-if="AsyncContent" :is="AsyncContent" />

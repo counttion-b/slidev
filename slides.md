@@ -39,11 +39,12 @@ hideInToc: true
 
 # 目录Content
 
-<Toc minDepth="1" maxDepth="2" />
+<Toc minDepth="1" maxDepth="3" />
 
 
 
 ---
+title: 摩擦力大小的计算
 layout: two-cols-header
 transition: fade-out
 ---
@@ -70,6 +71,7 @@ transition: fade-out
 - 也可以根据**运动状态法**间接计算动摩擦力大小
 
 ---
+title: 运动状态法
 layout: two-cols-header
 level: 2
 dragPos:
@@ -100,7 +102,7 @@ dragPos:
 - 若 A 不匀速下滑，$f_k$ 是否不变？
 
 ---
-title: 推论法
+title: 运动状态法的数学本质
 level: 2
 dragPos:
   square1: 636,143,246,194
@@ -119,38 +121,330 @@ $$F+N+G+f=F_合$$
 
 ---
 transition: fade-out
-title: 竖直上抛
+title: 题1-1
+level: 3
+hideInToc: true
 dragPos:
-  square1: 55,8,726,216
+  square1: 55,8,707,242
 ---
 
 <img v-drag="'square1'" src="./files/2.png">
 
 ---
 transition: fade-out
-title: 多过程
+title: 题1-2
+hideInToc: true
+level: 3
+dragPos:
+  square1: 55,8,658,254
 ---
 
-#多过程
-<SlidevGraph
-  id="graph1"
-  :items="[
-    { name: 'foo', color: '#155' },
-    { name: 'bar', color: '#551', from: ['foo'] },
-  ]"
-/>
+<img v-drag="'square1'" src="./files/3.png">
 
 ---
-title: 题解演示（可滚动容器）
+transition: fade-out
+title: 题1-3
+hideInToc: true
+level: 3
+dragPos:
+  square1: 55,8,578,261
+---
+
+<img v-drag="'square1'" src="./files/4.png">
+
+
+---
+title: 摩擦力的有无及方向的判定
+layout: two-cols-header
+transition: fade-out
+---
+
+<Toc mode="onlyCurrentTree" minDepth="1" maxDepth="3" />
+
+---
+title: 摩擦力基础
+transition: fade-out
 level: 2
+dragPos:
+  square1: 114,91,663,369
 ---
 
-## 题目解答（触控可滚动）
+# 摩擦力基础知识
+<img v-drag="'square1'" src="./files/5.png">
 
-使用方式一：组件
-$\sqrt{3x-1}+(1+x)^2$
-<Solution src="/files/9.27.md" maxHeight="25vh" />
+---
+title: 滑动摩擦力:相对运动法
+layout: two-cols-header
+transition: fade-out
+level: 2
+dragPos:
+  square1: 614,29,286,138
+---
 
+# 滑动摩擦力:相对运动法
+
+::left::
+## 相对运动法
+A受滑动摩擦力是由A相对B的运动造成的，  
+所以从定义出发，判断滑动摩擦力的方向  
+>1.判断A相对B速度关系  
+>2.判断A相对B运动方向  
+>3.判断A受B的$f_k$方向
+::right::
+## 举个例子：
+<img v-drag="'square1'" src="./files/6.png">
 <br>
 
-$F=ma$
+讨论以下三种情况下，物块A受$f_k$的方向.
+- $v_2=v_1$  
+- $v_2>v_1$
+- $v_2<v_1$
+
+---
+transition: fade-out
+title: 题2-1
+hideInToc: true
+level: 3
+dragPos:
+  square1: 55,8,681,382
+---
+
+<img v-drag="'square1'" src="./files/7.png">
+
+---
+transition: fade-out
+title: 题2-2
+hideInToc: true
+level: 3
+dragPos:
+  square1: 55,8,798,428
+---
+
+<img v-drag="'square1'" src="./files/8.png">
+
+---
+transition: fade-out
+title: 题2-3
+hideInToc: true
+level: 3
+dragPos:
+  square1: 55,8,651,226
+---
+
+<img v-drag="'square1'" src="./files/9.png">
+
+---
+title: 总结：对相对运动的理解
+transition: fade-out
+hideInToc: true
+level: 2
+dragPos:
+  square1: 614,29,286,138
+---
+
+# 总结：对相对运动的理解
+摩擦力的方向总是与物体间相对运动(或相对运动趋势)的方向相反，  
+与物体的运动方向_________。
+>1.摩擦力既可以是阻力，也可以是动力。  
+>2.受静摩擦力作用的物体不一定静止，受滑动摩擦力作用的物体不一定运动。 
+
+
+---
+title: 静摩擦力
+transition: fade-out
+level: 2
+dragPos:
+  square1: 31,136,608,275
+---
+
+# 静摩擦力的方向判断
+<img v-drag="'square1'" src="./files/10.png">
+
+---
+title: 假想光滑法
+transition: fade-out
+level: 3
+dragPos:
+  square1: 31,136,614,216
+---
+
+# 假想光滑法
+<img v-drag="'square1'" src="./files/11.png">
+
+---
+transition: fade-out
+title: 题3-1
+hideInToc: true
+level: 3
+dragPos:
+  square1: 37,5,756,340
+---
+
+<img v-drag="'square1'" src="./files/12.png">
+
+---
+title: 运动状态法
+transition: fade-out
+level: 3
+---
+# 运动状态法  
+处于静止或匀速直线运动的物体，利用**平衡条件**确定静摩擦力的有无及方向。
+
+---
+transition: fade-out
+title: 题3-2
+hideInToc: true
+level: 3
+dragPos:
+  square1: 37,5,741,270
+---
+
+<img v-drag="'square1'" src="./files/13.png">
+
+---
+title: 相互作用法
+transition: fade-out
+level: 3
+---
+# 相互作用法
+“力是物体间的相互作用”，先确定受力较少的物体是否受到静摩擦力并判断方向，再根据**牛顿第三定律**确定另一物体是否受到静摩擦力及方向。
+
+---
+transition: fade-out
+title: 题3-3
+hideInToc: true
+level: 3
+dragPos:
+  square1: 37,5,743,313
+---
+
+<img v-drag="'square1'" src="./files/14.png">
+
+---
+title: 摩擦力突变
+layout: two-cols-header
+transition: fade-out
+dragPos:
+  square1: 379,75,436,339
+---
+
+# 摩擦力突变
+<Toc mode="onlyCurrentTree" minDepth="1" maxDepth="3" />
+
+<img v-drag="'square1'" src="./files/15.png">
+
+---
+title: 静静突变
+transition: fade-out
+level: 3
+dragPos:
+  square1: 44,139,718,224
+---
+
+# 静静突变
+物体在静摩擦力和其他力的共同作用下处于静止状态，当作用在物体上的其他力的合力发生变化时，如果物体仍然保持静止状态，则物体受到的静摩擦力的大小和方向将发生突变。
+
+---
+transition: fade-out
+title: 题4-1
+hideInToc: true
+level: 3
+dragPos:
+  square1: 9,4,751,268
+---
+
+<img v-drag="'square1'" src="./files/16.png">
+
+---
+transition: fade-out
+title: 题4-2
+hideInToc: true
+level: 3
+dragPos:
+  square1: 13,15,734,331
+---
+
+<img v-drag="'square1'" src="./files/17.png">
+
+---
+transition: fade-out
+title: 题4-3
+hideInToc: true
+level: 3
+dragPos:
+  square1: 24,27,779,299
+---
+
+<img v-drag="'square1'" src="./files/18.png">
+
+---
+title: 静动突变
+transition: fade-out
+level: 2
+dragPos:
+  square1: 31,136,614,216
+---
+# 静动突变
+## 由静变动：  
+物体在静摩擦力和其他力作用下处于相对静止状态，当其他力变化时，如果物体不能保持相对静止状态，则物体受到的静摩擦力将“突变”成滑动摩擦力.  
+## 由动变静：  
+或在滑动摩擦力和其他力作用下，做减速运动的物体突然停止滑行时，物体将不再受滑动摩擦力作用，滑动摩擦力“突变”为静摩擦力。  
+
+---
+transition: fade-out
+title: 题4-4
+hideInToc: true
+level: 3
+dragPos:
+  square1: 9,14,755,423
+---
+
+<img v-drag="'square1'" src="./files/19.png">
+
+---
+transition: fade-out
+title: 题4-5
+hideInToc: true
+level: 3
+dragPos:
+  square1: 24,3,735,487
+---
+
+<img v-drag="'square1'" src="./files/20.png">
+
+---
+title: 动动突变
+transition: fade-out
+level: 2
+dragPos:
+  square1: 31,136,614,216
+---
+# 动动突变
+在滑动摩擦力作用下运动至达到共同速度后，如果在静摩擦力作用下不能保持相对静止，则物体将受滑动摩擦力作用，且其方向发生反向。
+
+---
+transition: fade-out
+title: 题4-6
+hideInToc: true
+level: 3
+dragPos:
+  square1: 5,-2,741,337
+---
+
+<img v-drag="'square1'" src="./files/21.png">
+
+---
+layout: cover
+titleZh: 摩擦分析
+session: Autumn-7
+date: 25.10.25
+teacher: 田以恒
+---
+
+---
+hideInToc: true
+---
+
+# 目录Content
+
+<Toc minDepth="1" maxDepth="3" />
